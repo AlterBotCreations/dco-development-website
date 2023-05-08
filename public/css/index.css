@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+}
+
+#mainDiv {
+    background: linear-gradient(to bottom, #8d5e4d, #20110e);
+    height: 100vh;
+}
+
+@font-face {
+    font-family: "Eroded-Font";
+    src: path("public\fonts\MotionPersonalUseBold-2O0od.ttf")
+}
+
+#titleDiv {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Eroded-Font", sans-serif;
+}

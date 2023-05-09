@@ -1,3 +1,7 @@
+/** Builds the supporter card section.
+ * 
+ * @author Alter
+ */
 class SupportersSectionBuilder {
 
     static async build() {

@@ -50,19 +50,28 @@ class SupportersGroup {
         const descriptionElement = document.createElement("p");
         descriptionElement.innerText = this.description;
         descriptionElement.classList.add(SupportersGroup.DESCRIPTION_ELEMENT_CLASSNAME);
-        // Build the mainDiv.
-        const groupDiv = document.createElement("div");
-        groupDiv.appendChild(nameElement);
-        groupDiv.appendChild(descriptionElement);
+        // Build the div that holds supporter cards.
+        const supporterCardHolderDiv = document.createElement("div");
+        supporterCardHolderDiv.classList.add(SupportersGroup.SUPPORTER_CARD_HOLDER_CLASSNAME);
         // Loop through the supporters cards.
         // Add each card to the groupDiv.
         for (const i in this.cards) {
-            groupDiv.appendChild(this.cards[i].build());
+            supporterCardHolderDiv.appendChild(this.cards[i].build());
         }
+        // Build the mainDiv.
+        const groupDiv = document.createElement("div");
+        groupDiv.classList.add(SupportersGroup.MAIN_DIV_CLASSNAME);
+        groupDiv.appendChild(nameElement);
+        groupDiv.appendChild(descriptionElement);
+        groupDiv.appendChild(supporterCardHolderDiv);
         // Append the groupDiv to the parent div.
         this.parentDiv.appendChild(groupDiv);
     }
 }
+/** The class name of the main div. */
+SupportersGroup.MAIN_DIV_CLASSNAME = "supportersGroupMainDiv";
+/** The class name of the div that holds the supporter cards. */
+SupportersGroup.SUPPORTER_CARD_HOLDER_CLASSNAME = "supportersGroupCardHolderDiv";
 /** The class name of the section's name html element. */
 SupportersGroup.NAME_ELEMENT_CLASSNAME = "supportersGroupName";
 /** The class name of the section's description html element.S */

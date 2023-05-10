@@ -1,0 +1,76 @@
+/* Styles the entire supporters section. */
+#supportersSection {
+
+    /* Other. */
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+
+    /* Border options. */
+    border: 1px solid black;
+    border-radius: 5px;
+
+    /* Text options. */
+    text-align: center;
+
+    /* Flex options. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Styles the main div of supporter groups. */
+.supportersGroupMainDiv {
+
+    /* Other. */
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+
+    /* Border options. */
+    border: 1px solid black;
+    border-radius: 5px;
+    
+    /* Flex options. */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.supportersGrouCardHolderDiv {
+
+    /* Flex options. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Styles the main div of supporter cards. */
+.supporterCardMainDiv {
+
+    /* Other. */
+    background-color: bisque;
+    padding: 10px;
+    max-width: 200px;
+
+    /* Border options. */
+    border-radius: 5px;
+    border: 1px solid black;
+
+    /* Flex options. */
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+   
+}
+
+/* Styles the children of supporter card main divs. */
+.supporterCardMainDiv>* {
+
+    padding: 5px;
+
+}

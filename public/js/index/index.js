@@ -27,8 +27,16 @@ function buildSupportersSection() {
         // Create the groups.
         const group1 = new supportersGroup_1.default("Platinum", "Nothing would be possible without our greatest donators.", supportersSectionDiv);
         group1.add(new supporterCard_1.default("Yipman", "image", 10000));
+        const group2 = new supportersGroup_1.default("Bronze", "Bronze supporters.", supportersSectionDiv);
+        group2.add(new supporterCard_1.default("Alter", "", 1));
+        group2.add(new supporterCard_1.default("Alter", "", 1));
+        group2.add(new supporterCard_1.default("Alter", "", 1));
+        group2.add(new supporterCard_1.default("Alter", "", 1));
+        group2.add(new supporterCard_1.default("Alter", "", 1));
+        group2.add(new supporterCard_1.default("Alter", "", 1));
         // Build the groups.
         group1.build();
+        group2.build();
     });
 }
 // Build the supporters section.

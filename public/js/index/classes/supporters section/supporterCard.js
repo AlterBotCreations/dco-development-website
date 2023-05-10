@@ -17,13 +17,11 @@ class SupporterCard {
      * @param donationAmountUSD The donation amount of the supporter.
      */
     constructor(name, imageLink, donationAmountUSD) {
+        /** The link/path to the supporter's image. Can serve as a profile pic.*/
+        this.imageLink = "./default_pfp.png"; // Default.
         // If the name is blank, throw an error.
         if (stringTools_1.default.isBlank(name)) {
             throw new Error(`name cannot be blank.`);
-        }
-        // If the imageLink is blank, throw an error.
-        else if (stringTools_1.default.isBlank(imageLink)) {
-            throw new Error(`imageLink cannot be blank.`);
         }
         // If the donation amount is less than 1, throw an error.
         else if (donationAmountUSD <= 0) {
@@ -44,6 +42,7 @@ class SupporterCard {
         // Build the image element.
         const imageElement = document.createElement("img");
         imageElement.src = this.imageLink;
+        imageElement.alt = "image";
         imageElement.classList.add(SupporterCard.IMAGE_ELEMENT_CLASSNAME);
         // Build the html main div element.
         const div = document.createElement("div");
@@ -51,7 +50,7 @@ class SupporterCard {
         div.appendChild(imageElement);
         div.appendChild(nameElement);
         // Return the main div.
-        return document.createElement("div");
+        return div;
     }
 }
 /** The class name of the main div. */

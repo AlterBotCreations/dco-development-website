@@ -20,7 +20,7 @@ export default class SupporterCard {
     name: string;
 
     /** The link/path to the supporter's image. Can serve as a profile pic.*/
-    imageLink: string;
+    imageLink: string = "./default_pfp.png"; // Default.
 
     /** The amount the supporter donated in USD */
     donationAmountUSD: number;
@@ -35,11 +35,6 @@ export default class SupporterCard {
         // If the name is blank, throw an error.
         if (StringTools.isBlank(name)) {
             throw new Error(`name cannot be blank.`);
-        }
-
-        // If the imageLink is blank, throw an error.
-        else if (StringTools.isBlank(imageLink)) {
-            throw new Error(`imageLink cannot be blank.`)
         }
 
         // If the donation amount is less than 1, throw an error.
@@ -65,6 +60,7 @@ export default class SupporterCard {
         // Build the image element.
         const imageElement: HTMLImageElement = document.createElement("img");
         imageElement.src = this.imageLink;
+        imageElement.alt = "image";
         imageElement.classList.add(SupporterCard.IMAGE_ELEMENT_CLASSNAME)
 
         // Build the html main div element.
@@ -74,7 +70,7 @@ export default class SupporterCard {
         div.appendChild(nameElement);
 
         // Return the main div.
-        return document.createElement("div");
+        return div;
     }
 
 }

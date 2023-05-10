@@ -7,7 +7,6 @@ class SupporterCard {
 
     static readonly SUPPORTER_CARD_MAIN_DIV_CLASS: string = "supporterCardMainDiv";
 
-
     /** The name of the supporter. */
     name: string;
 

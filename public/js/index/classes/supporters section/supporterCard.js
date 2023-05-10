@@ -37,13 +37,27 @@ class SupporterCard {
      *
      */
     build() {
-        // Create the html main div element.
+        // Build the name element.
+        const nameElement = document.createElement("h3");
+        nameElement.innerText = this.name;
+        nameElement.classList.add(SupporterCard.NAME_ELEMENT_CLASSNAME);
+        // Build the image element.
+        const imageElement = document.createElement("img");
+        imageElement.src = this.imageLink;
+        imageElement.classList.add(SupporterCard.IMAGE_ELEMENT_CLASSNAME);
+        // Build the html main div element.
         const div = document.createElement("div");
-        // Set the div's class for styling.
-        div.classList.add(SupporterCard.SUPPORTER_CARD_MAIN_DIV_CLASS);
+        div.classList.add(SupporterCard.MAIN_DIV_CLASSNAME);
+        div.appendChild(imageElement);
+        div.appendChild(nameElement);
         // Return the main div.
         return document.createElement("div");
     }
 }
-SupporterCard.SUPPORTER_CARD_MAIN_DIV_CLASS = "supporterCardMainDiv";
+/** The class name of the main div. */
+SupporterCard.MAIN_DIV_CLASSNAME = "supporterCardMainDiv";
+/** The class name of the name element. */
+SupporterCard.NAME_ELEMENT_CLASSNAME = "supporterCardName";
+/** The class name of the image element. */
+SupporterCard.IMAGE_ELEMENT_CLASSNAME = "supporterCardImage";
 exports.default = SupporterCard;

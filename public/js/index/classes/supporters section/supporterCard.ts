@@ -7,7 +7,14 @@ import StringTools from "../../tools/stringTools";
  */
 export default class SupporterCard {
 
-    static readonly SUPPORTER_CARD_MAIN_DIV_CLASS: string = "supporterCardMainDiv";
+    /** The class name of the main div. */
+    static readonly MAIN_DIV_CLASSNAME: string = "supporterCardMainDiv";
+
+    /** The class name of the name element. */
+    static readonly NAME_ELEMENT_CLASSNAME: string = "supporterCardName";
+
+    /** The class name of the image element. */
+    static readonly IMAGE_ELEMENT_CLASSNAME: string = "supporterCardImage";
 
     /** The name of the supporter. */
     name: string;
@@ -50,11 +57,21 @@ export default class SupporterCard {
      */
     build(): HTMLDivElement {
 
-        // Create the html main div element.
-        const div = document.createElement("div");
+        // Build the name element.
+        const nameElement: HTMLHeadingElement = document.createElement("h3");
+        nameElement.innerText = this.name;
+        nameElement.classList.add(SupporterCard.NAME_ELEMENT_CLASSNAME);
 
-        // Set the div's class for styling.
-        div.classList.add(SupporterCard.SUPPORTER_CARD_MAIN_DIV_CLASS);
+        // Build the image element.
+        const imageElement: HTMLImageElement = document.createElement("img");
+        imageElement.src = this.imageLink;
+        imageElement.classList.add(SupporterCard.IMAGE_ELEMENT_CLASSNAME)
+
+        // Build the html main div element.
+        const div = document.createElement("div");
+        div.classList.add(SupporterCard.MAIN_DIV_CLASSNAME);
+        div.appendChild(imageElement);
+        div.appendChild(nameElement);
 
         // Return the main div.
         return document.createElement("div");

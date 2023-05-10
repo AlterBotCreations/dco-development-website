@@ -1,4 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const stringTools_1 = __importDefault(require("../../tools/stringTools"));
 /** Holds supporter cards.
  *
  * @author Alter
@@ -13,11 +18,11 @@ class SupportersGroup {
      */
     constructor(name, description, parentDiv) {
         // If the name is blank, throw an error.
-        if (StringTools.isBlank(name)) {
+        if (stringTools_1.default.isBlank(name)) {
             throw new Error("name cannot be blank.");
         }
         // If the description is blank, throw an error.
-        else if (StringTools.isBlank(description)) {
+        else if (stringTools_1.default.isBlank(description)) {
             throw new Error("description cannot be blank.");
         }
         this.cards = [];
@@ -62,3 +67,4 @@ class SupportersGroup {
 SupportersGroup.NAME_ELEMENT_CLASSNAME = "supportersGroupName";
 /** The class name of the section's description html element.S */
 SupportersGroup.DESCRIPTION_ELEMENT_CLASSNAME = "supportersGroupDescription";
+exports.default = SupportersGroup;

@@ -1,4 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const stringTools_1 = __importDefault(require("../../tools/stringTools"));
 /** Creates a supporter card.
  *
  * @author Alter
@@ -13,11 +18,11 @@ class SupporterCard {
      */
     constructor(name, imageLink, donationAmountUSD) {
         // If the name is blank, throw an error.
-        if (StringTools.isBlank(name)) {
+        if (stringTools_1.default.isBlank(name)) {
             throw new Error(`name cannot be blank.`);
         }
         // If the imageLink is blank, throw an error.
-        else if (StringTools.isBlank(imageLink)) {
+        else if (stringTools_1.default.isBlank(imageLink)) {
             throw new Error(`imageLink cannot be blank.`);
         }
         // If the donation amount is less than 1, throw an error.
@@ -41,3 +46,4 @@ class SupporterCard {
     }
 }
 SupporterCard.SUPPORTER_CARD_MAIN_DIV_CLASS = "supporterCardMainDiv";
+exports.default = SupporterCard;

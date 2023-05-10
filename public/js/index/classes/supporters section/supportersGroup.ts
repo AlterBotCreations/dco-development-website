@@ -1,9 +1,12 @@
+import StringTools from "../../tools/stringTools";
+import SupporterCard from "./supporterCard";
+
 /** Holds supporter cards.
  * 
  * @author Alter
  * 
  */
-class SupportersGroup {
+export default class SupportersGroup {
 
     /** The class name of the section's name html element. */
     static readonly NAME_ELEMENT_CLASSNAME: string = "supportersGroupName";

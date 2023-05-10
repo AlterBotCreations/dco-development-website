@@ -3,7 +3,7 @@
  * @author Alter
  * 
  */
-class StringTools {
+export default class StringTools {
 
     /** Returns true if the string contains ONLY one or more spaces.
      * Returns false otherwise.

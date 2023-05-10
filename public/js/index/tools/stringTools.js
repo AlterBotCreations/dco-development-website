@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /** Contains useful string tool functions.
  *
  * @author Alter
@@ -24,3 +25,4 @@ class StringTools {
         return (string.length === 0 || this.isOnlySpaces(string));
     }
 }
+exports.default = StringTools;

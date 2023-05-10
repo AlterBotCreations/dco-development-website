@@ -1,9 +1,11 @@
+import StringTools from "../../tools/stringTools";
+
 /** Creates a supporter card.
  * 
  * @author Alter
  * 
  */
-class SupporterCard {
+export default class SupporterCard {
 
     static readonly SUPPORTER_CARD_MAIN_DIV_CLASS: string = "supporterCardMainDiv";
 

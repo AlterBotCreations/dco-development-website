@@ -10,6 +10,7 @@
     padding: 20px;
     margin: 20px;
     box-shadow: inset 0 0 15px 2px rgba(255, 0, 0, 0.6);
+    color: rgb(75, 189, 255);
 
     /* Border options. */
     border: 1px solid black;
@@ -23,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 
 }
 

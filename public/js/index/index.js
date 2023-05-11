@@ -34,9 +34,18 @@ function buildSupportersSection() {
         group2.add(new supporterCard_1.default("Alter", "", 1));
         group2.add(new supporterCard_1.default("Alter", "", 1));
         group2.add(new supporterCard_1.default("Alter", "", 1));
+        const group3 = new supportersGroup_1.default("Gold", "test", supportersSectionDiv);
+        group3.add(new supporterCard_1.default("Test", "", 2));
+        const group4 = new supportersGroup_1.default("Silver", "test", supportersSectionDiv);
+        const group5 = new supportersGroup_1.default("Basic", "test", supportersSectionDiv);
+        const group6 = new supportersGroup_1.default("Micro", "test", supportersSectionDiv);
         // Build the groups.
         group1.build();
         group2.build();
+        group3.build();
+        group4.build();
+        group5.build();
+        group6.build();
     });
 }
 // Build the supporters section.

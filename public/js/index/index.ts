@@ -22,10 +22,23 @@ async function buildSupportersSection() {
     group2.add(new SupporterCard("Alter", "", 1));
     group2.add(new SupporterCard("Alter", "", 1));
     group2.add(new SupporterCard("Alter", "", 1));
-    
+
+    const group3: SupportersGroup = new SupportersGroup("Gold", "test", supportersSectionDiv);
+    group3.add(new SupporterCard("Test", "", 2));
+
+    const group4: SupportersGroup = new SupportersGroup("Silver", "test", supportersSectionDiv);
+
+    const group5: SupportersGroup = new SupportersGroup("Basic", "test", supportersSectionDiv);
+
+    const group6: SupportersGroup = new SupportersGroup("Micro", "test", supportersSectionDiv);
+
     // Build the groups.
     group1.build();
     group2.build();
+    group3.build();
+    group4.build();
+    group5.build();
+    group6.build();
 
 }
 

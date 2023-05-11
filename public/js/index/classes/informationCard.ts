@@ -13,6 +13,11 @@ export abstract class InformationCard {
     /** The link/path to the card's image. Can serve as a profile pic.*/
     imageLink: string = "./default_pfp.png"; // Default.
 
+    /**
+     * 
+     * @param name The name on the card.
+     * @param imageLink The image on the card.
+     */
     constructor(name: string, imageLink: string) {
         // If the name is blank, throw an error.
         if (StringTools.isBlank(name)) {
@@ -25,6 +30,9 @@ export abstract class InformationCard {
         this.imageLink = imageLink;
     }
 
+    /** Returns the div that holds the card.
+     * 
+     */
     abstract build(): HTMLDivElement;
 
 }

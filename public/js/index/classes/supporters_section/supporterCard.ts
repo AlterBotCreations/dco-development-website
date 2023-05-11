@@ -1,3 +1,5 @@
+
+import { HTMLTools } from "../../tools/htmlTools";
 import { InformationCard } from "../informationCard";
 
 /** Creates a supporter card.
@@ -42,9 +44,7 @@ export default class SupporterCard extends InformationCard {
         nameElement.classList.add(SupporterCard.NAME_ELEMENT_CLASSNAME);
 
         // Build the image element.
-        const imageElement: HTMLImageElement = document.createElement("img");
-        imageElement.src = this.imageLink;
-        imageElement.alt = "image";
+        const imageElement: HTMLImageElement = HTMLTools.buildImageElement(this.imageLink, "image");
         imageElement.classList.add(SupporterCard.IMAGE_ELEMENT_CLASSNAME)
 
         // Build the html main div element.

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const htmlTools_1 = require("../../tools/htmlTools");
 const informationCard_1 = require("../informationCard");
 /** Creates a supporter card.
  *
@@ -26,9 +27,7 @@ class SupporterCard extends informationCard_1.InformationCard {
         nameElement.innerText = this.name;
         nameElement.classList.add(SupporterCard.NAME_ELEMENT_CLASSNAME);
         // Build the image element.
-        const imageElement = document.createElement("img");
-        imageElement.src = this.imageLink;
-        imageElement.alt = "image";
+        const imageElement = htmlTools_1.HTMLTools.buildImageElement(this.imageLink, "image");
         imageElement.classList.add(SupporterCard.IMAGE_ELEMENT_CLASSNAME);
         // Build the html main div element.
         const div = document.createElement("div");

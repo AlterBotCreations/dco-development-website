@@ -11,6 +11,11 @@ const stringTools_1 = __importDefault(require("../tools/stringTools"));
  *
  */
 class InformationCard {
+    /**
+     *
+     * @param name The name on the card.
+     * @param imageLink The image on the card.
+     */
     constructor(name, imageLink) {
         /** The link/path to the card's image. Can serve as a profile pic.*/
         this.imageLink = "./default_pfp.png"; // Default.

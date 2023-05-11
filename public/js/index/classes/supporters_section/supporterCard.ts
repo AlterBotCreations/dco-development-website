@@ -1,11 +1,11 @@
-import StringTools from "../../tools/stringTools";
+import { InformationCard } from "../informationCard";
 
 /** Creates a supporter card.
  * 
  * @author Alter
  * 
  */
-export default class SupporterCard {
+export default class SupporterCard extends InformationCard {
 
     /** The class name of the main div. */
     static readonly MAIN_DIV_CLASSNAME: string = "supporterCardMainDiv";
@@ -15,12 +15,6 @@ export default class SupporterCard {
 
     /** The class name of the image element. */
     static readonly IMAGE_ELEMENT_CLASSNAME: string = "supporterCardImage";
-
-    /** The name of the supporter. */
-    name: string;
-
-    /** The link/path to the supporter's image. Can serve as a profile pic.*/
-    imageLink: string = "./default_pfp.png"; // Default.
 
     /** The amount the supporter donated in USD */
     donationAmountUSD: number;
@@ -32,18 +26,8 @@ export default class SupporterCard {
      * @param donationAmountUSD The donation amount of the supporter.
      */
     constructor(name: string, imageLink: string, donationAmountUSD: number) {
-        // If the name is blank, throw an error.
-        if (StringTools.isBlank(name)) {
-            throw new Error(`name cannot be blank.`);
-        }
+        super(name, imageLink);
 
-        // If the donation amount is less than 1, throw an error.
-        else if (donationAmountUSD <= 0) {
-            throw new Error(`Invalid donationAmountUSD: ${donationAmountUSD}`);
-        }
-
-        this.name = name;
-        this.imageLink = imageLink;
         this.donationAmountUSD = donationAmountUSD;
     }
 

@@ -12,8 +12,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const supporterCard_1 = __importDefault(require("./classes/supporters section/supporterCard"));
-const supportersGroup_1 = __importDefault(require("./classes/supporters section/supportersGroup"));
+const supporterCard_1 = __importDefault(require("./classes/supporters_section/supporterCard"));
+const supportersGroup_1 = __importDefault(require("./classes/supporters_section/supportersGroup"));
 /** Builds the index pages's supporters section.
  *
  */

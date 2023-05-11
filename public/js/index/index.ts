@@ -1,5 +1,5 @@
-import SupporterCard from "./classes/supporters section/supporterCard";
-import SupportersGroup from "./classes/supporters section/supportersGroup";
+import SupporterCard from "./classes/supporters_section/supporterCard";
+import SupportersGroup from "./classes/supporters_section/supportersGroup";
 
 /** Builds the index pages's supporters section.
  *

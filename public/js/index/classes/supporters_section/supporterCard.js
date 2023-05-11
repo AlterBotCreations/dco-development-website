@@ -1,15 +1,12 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const stringTools_1 = __importDefault(require("../../tools/stringTools"));
+const informationCard_1 = require("../informationCard");
 /** Creates a supporter card.
  *
  * @author Alter
  *
  */
-class SupporterCard {
+class SupporterCard extends informationCard_1.InformationCard {
     /**
      *
      * @param name The name of the supporter.
@@ -17,18 +14,7 @@ class SupporterCard {
      * @param donationAmountUSD The donation amount of the supporter.
      */
     constructor(name, imageLink, donationAmountUSD) {
-        /** The link/path to the supporter's image. Can serve as a profile pic.*/
-        this.imageLink = "./default_pfp.png"; // Default.
-        // If the name is blank, throw an error.
-        if (stringTools_1.default.isBlank(name)) {
-            throw new Error(`name cannot be blank.`);
-        }
-        // If the donation amount is less than 1, throw an error.
-        else if (donationAmountUSD <= 0) {
-            throw new Error(`Invalid donationAmountUSD: ${donationAmountUSD}`);
-        }
-        this.name = name;
-        this.imageLink = imageLink;
+        super(name, imageLink);
         this.donationAmountUSD = donationAmountUSD;
     }
     /** Returns a div that contains the entire card.

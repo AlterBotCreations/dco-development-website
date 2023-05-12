@@ -22,8 +22,6 @@ export abstract class InformationCard {
         // If the name is blank, throw an error.
         if (StringTools.isBlank(name)) {
             throw new Error(`name cannot be blank.`);
-        } else if (StringTools.isBlank(imageLink)) {
-            throw new Error(`imageLink cannot be blank.`);
         }
 
         this.name = name;

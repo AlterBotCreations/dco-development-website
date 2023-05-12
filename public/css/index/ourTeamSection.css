@@ -1,0 +1,55 @@
+/*
+@author Alter 
+*/
+
+/* Stlye for the main div of the 'our team' section. */
+#ourTeamSection {
+    
+    /* Flex options. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Text options. */
+    text-align: center;
+
+}
+
+/* Style for h1 in the 'our team' section. */
+#ourTeamSection h1 {
+
+    font-size: 30px;
+
+}
+
+/* Style for the div that holds team member cards. */
+#teamMemberCardsHolder {
+    
+    /* Flex settings. */
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+/* Style for the main div of team member cards. */
+.teamMemberCardMainDiv {
+
+    /* Flex settings. */
+    display: flex;
+    flex-direction: column;
+
+    /* Border settings. */
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    /* Other settings. */
+    min-height: 200px;
+    min-width: 200px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+
+}

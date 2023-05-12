@@ -23,9 +23,6 @@ class InformationCard {
         if (stringTools_1.default.isBlank(name)) {
             throw new Error(`name cannot be blank.`);
         }
-        else if (stringTools_1.default.isBlank(imageLink)) {
-            throw new Error(`imageLink cannot be blank.`);
-        }
         this.name = name;
         this.imageLink = imageLink;
     }

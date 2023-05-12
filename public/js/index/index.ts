@@ -1,5 +1,36 @@
+/** The main file for the index page.
+ * 
+ * @author Alter
+ */
+
+import { TeamMemberCard } from "./classes/our_team_section/teamMemberCard";
 import SupporterCard from "./classes/supporters_section/supporterCard";
 import SupportersGroup from "./classes/supporters_section/supportersGroup";
+
+/** Builds the index page's 'our team' section.
+ * 
+ */
+async function buildOurTeamSection() {
+
+    // Get the card holder.
+    const cardHolderDivName: string = "teamMemberCardsHolder";
+    const cardHolderDiv: HTMLDivElement = document.getElementById(cardHolderDivName) as HTMLDivElement;
+
+    // Add the cards.
+    const cards = [
+        new TeamMemberCard("Yipman", "test", "Project Lead"),
+        new TeamMemberCard("Pagan", "test", "unsure"),
+        new TeamMemberCard("Fluffy", "test", "Arma III Developer"),
+        new TeamMemberCard("Tally", "test", "AI Developer\nArma III Developer"),
+        new TeamMemberCard("Yipman", "test", "Project Lead"),
+        new TeamMemberCard("Alter", "test", "Web Developer\nDiscord Bot Developer"),
+    ]
+
+    // Append the cards to the card holder div.
+    for (const index in cards) {
+        cardHolderDiv.appendChild(cards[index].build());
+    }
+}
 
 /** Builds the index pages's supporters section.
  *
@@ -42,7 +73,11 @@ async function buildSupportersSection() {
 
 }
 
-// Build the supporters section.
-buildSupportersSection();
+// Asynchronously build the webpage.
+Promise.all([
+    // Build the 'our team' section.
+    buildOurTeamSection(),
 
-console.log("index running")
+    // Build the supporters section.
+    buildSupportersSection()
+]);

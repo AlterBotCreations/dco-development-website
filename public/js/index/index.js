@@ -1,4 +1,8 @@
 "use strict";
+/** The main file for the index page.
+ *
+ * @author Alter
+ */
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -12,8 +16,32 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const teamMemberCard_1 = require("./classes/our_team_section/teamMemberCard");
 const supporterCard_1 = __importDefault(require("./classes/supporters_section/supporterCard"));
 const supportersGroup_1 = __importDefault(require("./classes/supporters_section/supportersGroup"));
+/** Builds the index page's 'our team' section.
+ *
+ */
+function buildOurTeamSection() {
+    return __awaiter(this, void 0, void 0, function* () {
+        // Get the card holder.
+        const cardHolderDivName = "teamMemberCardsHolder";
+        const cardHolderDiv = document.getElementById(cardHolderDivName);
+        // Add the cards.
+        const cards = [
+            new teamMemberCard_1.TeamMemberCard("Yipman", "test", "Project Lead"),
+            new teamMemberCard_1.TeamMemberCard("Pagan", "test", "unsure"),
+            new teamMemberCard_1.TeamMemberCard("Fluffy", "test", "Arma III Developer"),
+            new teamMemberCard_1.TeamMemberCard("Tally", "test", "AI Developer\nArma III Developer"),
+            new teamMemberCard_1.TeamMemberCard("Yipman", "test", "Project Lead"),
+            new teamMemberCard_1.TeamMemberCard("Alter", "test", "Web Developer\nDiscord Bot Developer"),
+        ];
+        // Append the cards to the card holder div.
+        for (const index in cards) {
+            cardHolderDiv.appendChild(cards[index].build());
+        }
+    });
+}
 /** Builds the index pages's supporters section.
  *
  */
@@ -48,6 +76,10 @@ function buildSupportersSection() {
         group6.build();
     });
 }
-// Build the supporters section.
-buildSupportersSection();
-console.log("index running");
+// Asynchronously build the webpage.
+Promise.all([
+    // Build the 'our team' section.
+    buildOurTeamSection(),
+    // Build the supporters section.
+    buildSupportersSection()
+]);

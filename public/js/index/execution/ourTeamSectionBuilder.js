@@ -8,8 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const teamMemberCard_1 = require("../classes/our_team_section/teamMemberCard");
+const teamMemberCardGroup_1 = __importDefault(require("../classes/our_team_section/teamMemberCardGroup"));
 /** Builds the 'our team' section.
  *
  * @author Alter
@@ -24,19 +28,33 @@ class OurTeamSectionBuilder {
             // Get the card holder.
             const cardHolderDivName = "teamMemberCardsHolder";
             const cardHolderDiv = document.getElementById(cardHolderDivName);
-            // Add the cards.
-            const cards = [
-                new teamMemberCard_1.TeamMemberCard("Yipman", "test", "Project Lead"),
-                new teamMemberCard_1.TeamMemberCard("Pagan", "test", "unsure"),
-                new teamMemberCard_1.TeamMemberCard("Fluffy", "test", "Arma III Developer"),
-                new teamMemberCard_1.TeamMemberCard("Tally", "test", "AI Developer\nArma III Developer"),
-                new teamMemberCard_1.TeamMemberCard("Yipman", "test", "Project Lead"),
-                new teamMemberCard_1.TeamMemberCard("Alter", "test", "Web Developer\nDiscord Bot Developer"),
+            // Create the developer team group.
+            const devTeamGroup = new teamMemberCardGroup_1.default("Development Team", "People that directly interact with the programming of DCO projects.");
+            // Add the card to the developer group.
+            const devTeamCards = [
+                new teamMemberCard_1.TeamMemberCard("Yipman", "", "DCO Project Lead"),
+                new teamMemberCard_1.TeamMemberCard("Tally", "", "Programmer: DCO GPT & PlatoonFsm."),
+                new teamMemberCard_1.TeamMemberCard("Fluffy", "", "Programmer: DCO Comsys"),
+                new teamMemberCard_1.TeamMemberCard("Alter", "", "Programmer: DCO ECO & Webpage, Web Security"),
             ];
-            // Append the cards to the card holder div.
-            for (const index in cards) {
-                cardHolderDiv.appendChild(cards[index].build());
-            }
+            devTeamGroup.cards = devTeamCards;
+            // Create the contributors group.
+            const contributorsGroup = new teamMemberCardGroup_1.default("Contributors", "Testers, Advisors, Designers and More.");
+            // Add the cards to the contributors group.
+            const contributorsTeamCards = [
+                new teamMemberCard_1.TeamMemberCard("Papareap", "", "Headless Client, Debug and Code Advisor"),
+                new teamMemberCard_1.TeamMemberCard("MyPalDeebs", "", "Idea And Design"),
+                new teamMemberCard_1.TeamMemberCard("Woody", "", "Military Advisor"),
+                new teamMemberCard_1.TeamMemberCard("Pagan", "", "Promo, Feedback, Testing"),
+                new teamMemberCard_1.TeamMemberCard("Karmakut", "", "Large Scale Testing And Promo"),
+                new teamMemberCard_1.TeamMemberCard("Samin", "", "GPT Advice"),
+                new teamMemberCard_1.TeamMemberCard("Bruno & Mcsellerie", "", "Long Term Testing & Moral Support"),
+                new teamMemberCard_1.TeamMemberCard("Nursifer", "", "Nutritional Specialist"),
+            ];
+            contributorsGroup.cards = contributorsTeamCards;
+            // Add the built groups to the div.
+            cardHolderDiv.appendChild(devTeamGroup.build());
+            cardHolderDiv.appendChild(contributorsGroup.build());
         });
     }
 }

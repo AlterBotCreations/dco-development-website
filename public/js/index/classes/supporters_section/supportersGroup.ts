@@ -1,4 +1,4 @@
-import StringTools from "../../tools/stringTools";
+import InformationCardGroup from "../informationCardGroup";
 import SupporterCard from "./supporterCard";
 
 /** Holds supporter cards.
@@ -6,7 +6,7 @@ import SupporterCard from "./supporterCard";
  * @author Alter
  * 
  */
-export default class SupportersGroup {
+export default class SupportersGroup extends InformationCardGroup {
 
     /** The class name of the main div. */
     static readonly MAIN_DIV_CLASSNAME: string = "supportersGroupMainDiv";
@@ -20,38 +20,15 @@ export default class SupportersGroup {
     /** The class name of the section's description html element.S */
     static readonly DESCRIPTION_ELEMENT_CLASSNAME: string = "supportersGroupDescription";
 
-    /** Holds the supporter cards. */
-    cards: SupporterCard[];
-
-    name: string;
-
-    description: string;
-
-    /** The parent div. */
-    parentDiv: HTMLDivElement;
-
     /**
      * 
      * @param name The name of the section.
      * @param description The description of the section.
      * @param parentDiv The div to append this section to.
      */
-    constructor(name: string, description: string, parentDiv: HTMLDivElement) {
-
-        // If the name is blank, throw an error.
-        if (StringTools.isBlank(name)) {
-            throw new Error("name cannot be blank.");
-        }
-
-        // If the description is blank, throw an error.
-        else if (StringTools.isBlank(description)) {
-            throw new Error("description cannot be blank.");
-        }
-
+    constructor(name: string, description: string) {
+        super(name, description);
         this.cards = [];
-        this.name = name;
-        this.description = description;
-        this.parentDiv = parentDiv;;
     }
 
     /** Adds a supporter card to the supporters section.
@@ -65,7 +42,7 @@ export default class SupportersGroup {
     /** Builds the section.
      * 
      */
-    build() {
+    override build(): HTMLDivElement {
 
         // Build the name.
         const nameElement: HTMLHeadingElement = document.createElement("h2");
@@ -95,8 +72,7 @@ export default class SupportersGroup {
         groupDiv.appendChild(descriptionElement);
         groupDiv.appendChild(supporterCardHolderDiv);
 
-        // Append the groupDiv to the parent div.
-        this.parentDiv.appendChild(groupDiv);
+        return groupDiv;
     }
 
 }

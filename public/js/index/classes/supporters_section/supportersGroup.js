@@ -3,33 +3,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const stringTools_1 = __importDefault(require("../../tools/stringTools"));
+const informationCardGroup_1 = __importDefault(require("../informationCardGroup"));
 /** Holds supporter cards.
  *
  * @author Alter
  *
  */
-class SupportersGroup {
+class SupportersGroup extends informationCardGroup_1.default {
     /**
      *
      * @param name The name of the section.
      * @param description The description of the section.
      * @param parentDiv The div to append this section to.
      */
-    constructor(name, description, parentDiv) {
-        // If the name is blank, throw an error.
-        if (stringTools_1.default.isBlank(name)) {
-            throw new Error("name cannot be blank.");
-        }
-        // If the description is blank, throw an error.
-        else if (stringTools_1.default.isBlank(description)) {
-            throw new Error("description cannot be blank.");
-        }
+    constructor(name, description) {
+        super(name, description);
         this.cards = [];
-        this.name = name;
-        this.description = description;
-        this.parentDiv = parentDiv;
-        ;
     }
     /** Adds a supporter card to the supporters section.
      *
@@ -65,8 +54,7 @@ class SupportersGroup {
         groupDiv.appendChild(nameElement);
         groupDiv.appendChild(descriptionElement);
         groupDiv.appendChild(supporterCardHolderDiv);
-        // Append the groupDiv to the parent div.
-        this.parentDiv.appendChild(groupDiv);
+        return groupDiv;
     }
 }
 /** The class name of the main div. */

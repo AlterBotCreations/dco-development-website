@@ -36,6 +36,7 @@ class TeamMemberCardGroup extends informationCardGroup_1.default {
         mainDiv.classList.add(TeamMemberCardGroup.MAIN_DIV_CLASSNAME);
         mainDiv.appendChild(nameElement);
         mainDiv.appendChild(descriptionElement);
+        mainDiv.appendChild(cardHolderDivElement);
         return mainDiv;
     }
 }

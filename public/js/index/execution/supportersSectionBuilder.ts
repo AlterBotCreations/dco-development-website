@@ -18,7 +18,7 @@ export default class SupportersSectionBuilder {
 
         // Create the groups.
         const group1: SupportersGroup = new SupportersGroup("Platinum", "Nothing would be possible without our greatest donators.")
-        group1.add(new SupporterCard("Yipman", "image", 10000));
+        group1.add(new SupporterCard("Yipman", "", 10000));
 
         const group2: SupportersGroup = new SupportersGroup("Bronze", "Bronze supporters.");
         group2.add(new SupporterCard("Alter", "", 1));

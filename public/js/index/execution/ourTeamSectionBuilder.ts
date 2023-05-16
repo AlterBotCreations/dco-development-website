@@ -14,7 +14,7 @@ export default class OurTeamSectionBuilder {
     static async build() {
 
         // Get the card holder.
-        const cardHolderDivName: string = "teamMemberCardsHolder";
+        const cardHolderDivName: string = "ourTeamSection";
         const cardHolderDiv: HTMLDivElement = document.getElementById(cardHolderDivName) as HTMLDivElement;
 
         // Create the developer team group.
@@ -46,6 +46,8 @@ export default class OurTeamSectionBuilder {
             new TeamMemberCard("Nursifer", "", "Nutritional Specialist"),
         ]
         contributorsGroup.cards = contributorsTeamCards;
+
+        console.log(contributorsGroup.build());
 
         // Add the built groups to the div.
         cardHolderDiv.appendChild(devTeamGroup.build());

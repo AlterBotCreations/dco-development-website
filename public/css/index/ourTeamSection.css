@@ -4,7 +4,7 @@
 
 /* Stlye for the main div of the 'our team' section. */
 #ourTeamSection {
-    
+
     /* Flex options. */
     display: flex;
     flex-direction: column;
@@ -12,6 +12,14 @@
 
     /* Text options. */
     text-align: center;
+    color: white;
+
+    /* Border options. */
+    border: 1px solid white;
+
+    /* Other options. */
+    margin-bottom: 50px;
+    background-color: black;
 
 }
 
@@ -22,16 +30,23 @@
 
 }
 
-/* Style for the div that holds team member cards. */
-#teamMemberCardsHolder {
-    
-    /* Flex settings. */
-    display: flex;
-    max-width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+.teamMemberCardImage {
+    max-width: 100px;
+    max-height: 100px;
+}
 
+.teamMemberCardGroupMainDiv {
+    
+    /* Other options. */
+    margin: 20px;
+
+    /* Flex options. */
+    display: flex;
+    flex-direction: column;
+
+
+    /* Border options. */
+    border: 1px solid white;
 }
 
 /* Style for the main div of team member cards. */
@@ -40,16 +55,31 @@
     /* Flex settings. */
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     /* Border settings. */
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
-    
+
     /* Other settings. */
-    min-height: 200px;
-    min-width: 200px;
-    background-color: white;
+    height: 200px;
+    width: 150px;
+    background-color: rgb(0, 0, 0);
+
+    /* Spacing settings. */
     margin: 20px;
     padding: 20px;
+
+}
+
+/* Style for the div that holds the team member cards. */
+.teamMemberCardGroupCardHolderDiv {
+
+    /* Flex options. */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
 }

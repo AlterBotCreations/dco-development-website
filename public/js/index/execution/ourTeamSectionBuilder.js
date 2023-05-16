@@ -26,7 +26,7 @@ class OurTeamSectionBuilder {
     static build() {
         return __awaiter(this, void 0, void 0, function* () {
             // Get the card holder.
-            const cardHolderDivName = "teamMemberCardsHolder";
+            const cardHolderDivName = "ourTeamSection";
             const cardHolderDiv = document.getElementById(cardHolderDivName);
             // Create the developer team group.
             const devTeamGroup = new teamMemberCardGroup_1.default("Development Team", "People that directly interact with the programming of DCO projects.");
@@ -52,6 +52,7 @@ class OurTeamSectionBuilder {
                 new teamMemberCard_1.TeamMemberCard("Nursifer", "", "Nutritional Specialist"),
             ];
             contributorsGroup.cards = contributorsTeamCards;
+            console.log(contributorsGroup.build());
             // Add the built groups to the div.
             cardHolderDiv.appendChild(devTeamGroup.build());
             cardHolderDiv.appendChild(contributorsGroup.build());

@@ -18,13 +18,16 @@ class InformationCard {
      */
     constructor(name, imageLink) {
         /** The link/path to the card's image. Can serve as a profile pic.*/
-        this.imageLink = "./default_pfp.png"; // Default.
+        this.imageLink = "./images/default_pfp.png"; // Default.
         // If the name is blank, throw an error.
         if (stringTools_1.default.isBlank(name)) {
             throw new Error(`name cannot be blank.`);
         }
         this.name = name;
-        this.imageLink = imageLink;
+        // If the image link is not blank, replace it.
+        if (!stringTools_1.default.isBlank(imageLink)) {
+            this.imageLink = imageLink;
+        }
     }
 }
 exports.InformationCard = InformationCard;

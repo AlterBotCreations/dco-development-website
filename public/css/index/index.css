@@ -22,6 +22,15 @@
     padding: 20px;
 }
 
+#sections {
+
+    /* Flex settings. */
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+
 h1 {
     font-family: "Eroded-Font", serif;
     font-size: 75px;

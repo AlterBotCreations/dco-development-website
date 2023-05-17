@@ -52,7 +52,6 @@ class OurTeamSectionBuilder {
                 new teamMemberCard_1.TeamMemberCard("Nursifer", "", "Nutritional Specialist"),
             ];
             contributorsGroup.cards = contributorsTeamCards;
-            console.log(contributorsGroup.build());
             // Add the built groups to the div.
             cardHolderDiv.appendChild(devTeamGroup.build());
             cardHolderDiv.appendChild(contributorsGroup.build());

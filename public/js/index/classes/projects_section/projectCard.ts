@@ -5,6 +5,7 @@ import InformationCard from "../informationCard";
 
 /** Displays a Project.
  * 
+ * @author Alter
  */
 export default class ProjectCard extends InformationCard {
 

@@ -47,8 +47,6 @@ export default class OurTeamSectionBuilder {
         ]
         contributorsGroup.cards = contributorsTeamCards;
 
-        console.log(contributorsGroup.build());
-
         // Add the built groups to the div.
         cardHolderDiv.appendChild(devTeamGroup.build());
         cardHolderDiv.appendChild(contributorsGroup.build());

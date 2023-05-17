@@ -9,6 +9,7 @@ const stringTools_1 = __importDefault(require("../../tools/stringTools"));
 const informationCard_1 = __importDefault(require("../informationCard"));
 /** Displays a Project.
  *
+ * @author Alter
  */
 class ProjectCard extends informationCard_1.default {
     /**

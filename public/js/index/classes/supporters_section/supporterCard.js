@@ -1,13 +1,16 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const htmlTools_1 = require("../../tools/htmlTools");
-const informationCard_1 = require("../informationCard");
+const htmlTools_1 = __importDefault(require("../../tools/htmlTools"));
+const informationCard_1 = __importDefault(require("../informationCard"));
 /** Creates a supporter card.
  *
  * @author Alter
  *
  */
-class SupporterCard extends informationCard_1.InformationCard {
+class SupporterCard extends informationCard_1.default {
     /**
      *
      * @param name The name of the supporter.
@@ -27,7 +30,7 @@ class SupporterCard extends informationCard_1.InformationCard {
         nameElement.innerText = this.name;
         nameElement.classList.add(SupporterCard.NAME_ELEMENT_CLASSNAME);
         // Build the image element.
-        const imageElement = htmlTools_1.HTMLTools.buildImageElement(this.imageLink, "image");
+        const imageElement = htmlTools_1.default.buildImageElement(this.imageLink, "image");
         imageElement.classList.add(SupporterCard.IMAGE_ELEMENT_CLASSNAME);
         // Build the html main div element.
         const div = document.createElement("div");

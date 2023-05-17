@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HTMLTools = void 0;
 /** Contains useful HTML tools.
  *
  * @author Alter
@@ -20,4 +19,4 @@ class HTMLTools {
         return imageElement;
     }
 }
-exports.HTMLTools = HTMLTools;
+exports.default = HTMLTools;

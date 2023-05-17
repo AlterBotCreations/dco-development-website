@@ -5,7 +5,7 @@ import StringTools from "../tools/stringTools";
  * @author Alter
  * 
  */
-export abstract class InformationCard {
+export default abstract class InformationCard {
 
     /** The name of the card. */
     name: string;

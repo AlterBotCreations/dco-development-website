@@ -1,6 +1,6 @@
 
-import { HTMLTools } from "../../tools/htmlTools";
-import { InformationCard } from "../informationCard";
+import HTMLTools from "../../tools/htmlTools";
+import InformationCard from "../informationCard";
 
 /** Creates a supporter card.
  * 

@@ -1,5 +1,5 @@
 import StringTools from "../tools/stringTools";
-import { InformationCard } from "./informationCard";
+import InformationCard from "./informationCard";
 
 /** Holds multiple information cards.
  * 

@@ -3,7 +3,7 @@
  * @author Alter
  * 
  */
-export class HTMLTools {
+export default class HTMLTools {
 
     /** Returns a new gtml img element.
      * 

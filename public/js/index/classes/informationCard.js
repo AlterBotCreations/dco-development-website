@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InformationCard = void 0;
 const stringTools_1 = __importDefault(require("../tools/stringTools"));
 /** For information card standardization.
  *
@@ -30,4 +29,4 @@ class InformationCard {
         }
     }
 }
-exports.InformationCard = InformationCard;
+exports.default = InformationCard;

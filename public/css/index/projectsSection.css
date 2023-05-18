@@ -19,12 +19,16 @@
     /* Border options/ */
     border: 1px solid white;
     border-radius: 10px;
+
 }
 
 /* Style for the projects section header. */
 #projectsSection>h1 {
 
-    font-size: 40px;
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
 }
 

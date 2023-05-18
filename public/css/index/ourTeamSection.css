@@ -16,10 +16,12 @@
 
     /* Border options. */
     border: 1px solid white;
+    border-radius: 10px;
 
     /* Other options. */
     margin-bottom: 50px;
     background-color: black;
+    font-family: 'Courier New', Courier, monospace;
 
 }
 

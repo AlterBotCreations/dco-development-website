@@ -30,7 +30,7 @@
 /* Contains the banner. */
 #indexBannerDiv {
 
-    height: 200px;
+    height: 300px;
     width: 100%;
     border: 1px solid rgb(0, 0, 0);
 
@@ -40,9 +40,27 @@
 }
 
 #titleDiv {
+
+    /* Flex options. */
     display: flex;
     justify-content: center;
+
+    /* Spacing options. */
     padding: 20px;
+    transform: translateY(-50px);
+    z-index: 1;
+
+    /* Size options. */
+    height: 150px;
+    width: 100%;
+
+    box-shadow: 20px 10px 20px black;
+}
+
+h1 {
+    margin-top: 25px;
+    font-family: Arial, Helvetica, serif;
+    font-size: 75px;
 }
 
 #sections {
@@ -52,9 +70,4 @@
     flex-direction: column;
     margin: 20px;
 
-}
-
-h1 {
-    font-family: "Eroded-Font", serif;
-    font-size: 75px;
 }

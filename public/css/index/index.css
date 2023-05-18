@@ -6,14 +6,37 @@
     margin: 0px;
 }
 
+/* Contains everything on the index page. */
 #mainDiv {
     background: linear-gradient(to bottom, #8d5e4d, #20110e);
     height: 100%;
+    width: 100%;
+
+    overflow-y: hidden;
+
+    /* Flex settings. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 @font-face {
     font-family: "Eroded-Font";
     src: path("public\fonts\MotionPersonalUseBold-2O0od.ttf")
+}
+
+/* Contains the banner. */
+#indexBannerDiv {
+
+    height: 200px;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+
+    background-color: white;
+    
+
 }
 
 #titleDiv {

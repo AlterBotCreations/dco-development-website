@@ -1,0 +1,57 @@
+/*
+@author Alter 
+ */
+
+/* Contains the socials buttons. */
+#socialsButtonsDiv {
+
+    /* Size settings. */
+    height: 100px;
+    width: 100%;
+
+    /* Spacing settings. */
+
+
+    /* Flex settings. */
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-end;
+
+    /* Border settings. */
+    border: 1px solid black;
+
+}
+
+/* Style for images in the socials buttons div. */
+#socialsButtonsDiv>img {
+
+    margin-top: 50px;
+    margin-right: 75px;
+
+    height: 100px;
+    width: 100px;
+
+}
+
+@keyframes buttonHoverAnimation {
+    0% {
+        size: 100%;
+    }
+    50% {
+        size: 110%;
+    }
+    75% {
+        size: 95%;
+    }
+    100% {
+        size: 100%;
+    }
+}
+
+/* Style for images in the socials buttons div. */
+#socialsButtonsDiv>img:hover {
+    animation-name: buttonHoverAnimation;
+    animation-duration: 0.5s;
+
+}

@@ -54,7 +54,7 @@
     height: 150px;
     width: 100%;
 
-    box-shadow: 20px 10px 20px black;
+    box-shadow: 0px 10px 30px rgb(0, 0, 0);
 }
 
 h1 {

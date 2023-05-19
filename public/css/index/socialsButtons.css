@@ -7,25 +7,52 @@
 
     /* Size settings. */
     height: 100px;
-    width: 100%;
+    width: 25%;
 
     /* Spacing settings. */
     transform: translateY(-50px);
     margin-bottom: -50px;
+    margin-right: 100px;
+    float: right;
     z-index: 2;
 
     /* Flex settings. */
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
-    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    align-self: flex-end;
+
+}
+
+@keyframes socialsButtonHoverAnimation {
+    0% {
+        scale: 95%;
+    }
+
+    50% {
+        scale: 110%;
+    }
+
+    100% {
+        scale: 115%;
+    }
+}
+
+
+#socialsButtonsDiv>img:hover {
+    animation-name: socialsButtonHoverAnimation;
+    animation-duration: 0.15s;
+
+    filter: brightness(115%);
+    border: 2px solid rgb(255, 174, 0);
+    scale: 110%;
 
 }
 
 /* Style for images in the socials buttons div. */
 #socialsButtonsDiv>img {
-
-    margin-right: 75px;
 
     height: 100px;
     width: 100px;
@@ -34,28 +61,5 @@
 
     box-shadow: 2px 4px 7px black;
 
-}
-
-@keyframes socialsButtonHoverAnimation {
-    0% {
-        size: 100%;
-    }
-
-    50% {
-        size: 110%;
-    }
-
-    75% {
-        size: 95%;
-    }
-
-    100% {
-        size: 100%;
-    }
-}
-
-/* Style for images in the socials buttons div. */
-#socialsButtonsDiv>img:hover {
-    animation-name: socialsButtonHoverAnimation;
-    animation-duration: 1s;
+    filter: blur(0px);
 }

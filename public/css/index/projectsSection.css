@@ -15,7 +15,7 @@
     padding: 20px;
     background-color: black;
     color: white;
-    
+
     /* Border options/ */
     border: 1px solid white;
     border-radius: 10px;
@@ -68,7 +68,29 @@
 
     /* Color options. */
     background-color: rgb(0, 0, 0);
+}
 
+/* Animation for hovering over a project card. */
+@keyframes projectCardHoverAnimation {
+    0% {
+        scale: 100%;
+    }
+
+    75% {
+        scale: 115%;
+    }
+}
+
+/* Style for project cart main div HOVER. */
+.projectCardMainDiv:hover {
+    animation-name: projectCardHoverAnimation;
+    animation-duration: 0.25s;
+
+    filter: brightness(150%);
+    box-shadow: 0px 0px 10px 2px white;
+    border: 1px solid rgb(0, 145, 255);
+
+    scale: 110%;
 }
 
 /* Style for the project card title. */

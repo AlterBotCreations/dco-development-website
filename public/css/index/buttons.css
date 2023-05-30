@@ -2,12 +2,45 @@
 @author Alter 
  */
 
+/* Contains all of the buttons. */
+#buttonsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
 /* Contains the socials buttons. */
-#socialsButtonsDiv {
+.buttonsDiv {
 
     /* Size settings. */
     height: 100px;
     width: 25%;
+
+    /* Flex settings. */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#socialsButtonsDiv {
+
+    /* Spacing settings. */
+    transform: translateY(-50px);
+    margin-bottom: -50px;
+    margin-right: 100px;
+    float: left;
+    z-index: 2;
+
+    /* Flex settings. */
+    align-self: flex-start;
+
+}
+
+#supportButtonsDiv {
 
     /* Spacing settings. */
     transform: translateY(-50px);
@@ -17,11 +50,6 @@
     z-index: 2;
 
     /* Flex settings. */
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: space-around;
     align-self: flex-end;
 
 }
@@ -41,7 +69,7 @@
 }
 
 
-#socialsButtonsDiv>img:hover {
+.buttonsDiv>img:hover {
     animation-name: socialsButtonHoverAnimation;
     animation-duration: 0.15s;
 
@@ -52,7 +80,7 @@
 }
 
 /* Style for images in the socials buttons div. */
-#socialsButtonsDiv>img {
+.buttonsDiv>img {
 
     height: 100px;
     width: 100px;

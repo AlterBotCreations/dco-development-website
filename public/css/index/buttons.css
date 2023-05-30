@@ -69,7 +69,7 @@
 }
 
 
-.buttonsDiv>img:hover {
+.buttonsDiv img:hover {
     animation-name: socialsButtonHoverAnimation;
     animation-duration: 0.15s;
 
@@ -80,7 +80,7 @@
 }
 
 /* Style for images in the socials buttons div. */
-.buttonsDiv>img {
+.buttonsDiv img {
 
     height: 100px;
     width: 100px;

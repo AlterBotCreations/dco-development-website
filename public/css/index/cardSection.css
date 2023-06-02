@@ -1,0 +1,24 @@
+.cardSection {
+
+    /* Flex options. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Other options. */
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+
+    text-align: center;
+
+    border: 4px solid red;
+}
+
+.cardSection>h1 {
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

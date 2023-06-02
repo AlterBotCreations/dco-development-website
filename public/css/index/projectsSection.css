@@ -2,26 +2,6 @@
 @author Alter 
 */
 
-/* Style for the projects section. */
-#projectsSection {
-
-    /* Flex options. */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    /* Other options. */
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: black;
-    color: white;
-
-    /* Border options/ */
-    border: 7px solid rgb(255, 0, 0);
-    border-radius: 10px;
-
-}
-
 /* Style for the projects section header. */
 #projectsSection>h1 {
 

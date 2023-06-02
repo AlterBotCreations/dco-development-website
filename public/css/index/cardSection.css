@@ -6,18 +6,23 @@
     align-items: center;
 
     /* Other options. */
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     padding: 20px;
     background-color: black;
     color: white;
 
+    /* Text optoins. */
     text-align: center;
 
-    border: 4px solid red;
+    /* Border options. */
+    border: 6px solid red;
+    border-radius: 10px;
+
+    scale: 90%;
 }
 
 .cardSection>h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 30px;
     margin-bottom: 30px;

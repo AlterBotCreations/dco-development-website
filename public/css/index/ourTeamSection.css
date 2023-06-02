@@ -20,13 +20,21 @@
     /* border: 1px solid white; */
 }
 
-.teamMemberCardGroupMainDiv>h1 {
-    font-size: 45px;
+/* Style for the name of a team member card group. */
+.teamMemberCardGroupName {
+    font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
 }
+
+/* Style for the description of a team member card group. */
+.teamMemberCardGroupDescription {
+    font-size: 15px;
+}
+
+
 
 /* Style for the main div of team member cards. */
 .teamMemberCardMainDiv {
@@ -51,7 +59,8 @@
 
 }
 
-.teamMemberCardMainDiv>h1 {
+/* Style for the name of the team member on the team member cards. */
+.teamMemberCardName {
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 30px;
@@ -70,7 +79,3 @@
 
 }
 
-/* Style for the card group descriptions. */
-.teamMemberCardGroupDescription {
-    font-size: 23px;
-}

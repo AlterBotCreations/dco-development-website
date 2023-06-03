@@ -2,44 +2,6 @@
 @author Alter 
 */
 
-/* Stlye for the main div of the 'our team' section. */
-#ourTeamSection {
-
-    /* Flex options. */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    /* Text options. */
-    text-align: center;
-    color: white;
-
-    /* Border options. */
-    border: 1px solid white;
-    border-radius: 10px;
-
-    /* Other options. */
-    margin-bottom: 50px;
-    background-color: black;
-    font-family: 'Courier New', Courier, monospace;
-
-}
-
-/* Style for h1 in the 'our team' section. */
-#ourTeamSection h1 {
-
-    font-size: 30px;
-    margin: 10px;
-
-}
-
-#ourTeamSection>h1 {
-
-    font-size: 40px;
-    margin: 50px;
-
-}
-
 .teamMemberCardImage {
     max-width: 100px;
     max-height: 100px;
@@ -54,10 +16,25 @@
     display: flex;
     flex-direction: column;
 
-
     /* Border options. */
     /* border: 1px solid white; */
 }
+
+/* Style for the name of a team member card group. */
+.teamMemberCardGroupName {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Style for the description of a team member card group. */
+.teamMemberCardGroupDescription {
+    font-size: 15px;
+}
+
+
 
 /* Style for the main div of team member cards. */
 .teamMemberCardMainDiv {
@@ -72,7 +49,7 @@
     border-radius: 10px;
 
     /* Other settings. */
-    height: 225px;
+    height: 250px;
     width: 175px;
     background-color: rgb(0, 0, 0);
 
@@ -80,6 +57,14 @@
     margin: 20px;
     padding: 20px;
 
+}
+
+/* Style for the name of the team member on the team member cards. */
+.teamMemberCardName {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 /* Style for the div that holds the team member cards. */
@@ -93,3 +78,4 @@
     justify-content: center;
 
 }
+
